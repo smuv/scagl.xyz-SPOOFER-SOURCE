@@ -1,8 +1,13 @@
-#include <Windows.h>
+#pragma once
 #include <iostream>
-#include <stdio.h>
-#include <random>
+#include <string>
 #include <tchar.h>
+#include <string.h>
+#include <urlmon.h>
+#include <stdio.h>
+#include <Windows.h>
+#pragma comment (lib, "urlmon.lib")
+using namespace std;
 
 namespace memory {
 	int being_debugged_peb();
@@ -65,7 +70,7 @@ int main()
 	Sleep(50);
 	printf("o ");
 	Sleep(500);
-	printf("for example - My new spoofer.");
+	printf("scagl.xyz | Spoofer & Cleaner");
 	Sleep(5000);
 	system("cls");
 	printf("[!] Loading modules	");
@@ -94,24 +99,70 @@ int main()
 		system("color b");
 		system("color c");
 		system("color d");
-		Sleep(20);
+		Sleep(2);
 	}
 
-
+menu:
 	system("cls");
-	MessageBoxA(NULL, "Welcome to spoofer!", "scagl.xyz", MB_OK);
-	printf("                   _               \n");
-	printf("  ___ __ __ _ __ _| | __ ___  _ ___\n");
-	printf(" (_-</ _/ _` / _` | |_\ \ / || |_ /\n");
-	printf(" /__/\__\__,_\__, |_(_)_\_\\_, /__|\n");
-	printf("             |___/         |__/    \n");
+	system("color c");
+	MessageBoxA(ERROR, "Spoofer initialized!", "scagl.xyz", MB_OK);
+	int choice;
+	printf("                               .                        \n");
+	printf("    ____   ___    ___    ___.  |     _  .- ,    .  ____ \n");
+	printf("  (     .'   `  /   ` .'   `  |      \\,'  |    `     / \n");
+	printf("  `--.  |      |    | |    |  |      /\\   |    |   ,/  \n");
+	printf(" \\___.'  `._.' `.__/|  `---| /\\__ / / \\ `---|.  /__.'\n");
+	printf("                       \\___/              \\___/  `    \n");
+	printf("\n");
 	printf("");
 	printf("");
 	printf("");
-	printf("[1] Spoof\n [2] Clean\n [3] Discord\n >> Your option: ");
+	printf(" [1] Spoof\n [2] Clean\n [3] Discord\n\n >> Your option: ");
+	cin >> choice;
+	//spoofer | add it by yourself
+	if (choice == 1)
+	{
+		system("cls");
+		system("color c");
+		printf("[>] Spoofing PC...");
+		system("start cmd /q /k SPOOFER.exe");
+		Sleep(2000);
+		printf("[>] Spoofing MAC \n");
+		Sleep(2000);
+		printf("[>] Spoofing NETWORK\n");
+		Sleep(2000);
+		printf("[>] Spoofing PC INFO\n");
+		Sleep(2000);
+		printf("[>] Spoofing HWID\n");
+		Sleep(2000);
+		system("cls");
+		system("color a");
+		printf("[+] Spoofed!\n");
+		Sleep(2000);
+		printf("[!] Returning to menu...\n");
+		Sleep(2000);
+		goto menu;
+	}
+	//cleaner | add it by yourself
+	if (choice == 2)
+	{
+		system("cls");
+		system("color e");
+		printf("[>] Cleaning your PC");
+		Sleep(20000);
+		system("start cmd /q /k CLEANER.exe");
+		goto menu;
+	}
+	if (choice == 3)
+	{
+		system("start https://discord.gg/DVY7rEeGDH");
+	}
 }
 
-// that's v.1 = more options soon 
-// github.com/5nx 
+
+// that's version 1.2
+// github.com/5nx
 // contact: damo#4444
-// made with <3 by ^
+// made with <3 by ^^
+// join here https://discord.gg/DVY7rEeGDH 
+// ^for more sources/updates
